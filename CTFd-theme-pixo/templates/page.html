@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .logo {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .icons a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #cecece;
+        text-shadow: 0 0.5px 0 rgba(255,105,246,.8)
+    }
+
+</style>
+<div class="container custom-container-style">
+    <img src="{{ url_for('views.files', path=Configs.ctf_logo) }}" height="100" alt="{{ Configs.ctf_name }}"
+         class="logo">
+    <div class="title"><h1>Quizmine</h1></div>
+    <div class="icons">
+        <a href="https://vk.com/donetsk_ctf" target="_blank"><img
+                src="{{ url_for('views.themes', path='img/link.png') }}" height="20" alt="vk_logo"> Вконтакте</a>
+        <a href="https://vk.com/away.php?to=https%3A%2F%2Fdiscord.gg%2FNAX9E4NA" target="_blank"><img
+                src="{{ url_for('views.themes', path='img/link.png') }}" height="20" alt="discord_logo"> Дискорд</a>
+    </div>
+</div>
+{% endblock %}
